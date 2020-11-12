@@ -144,7 +144,7 @@ function xerountax_civicrm_accountPushAlterMapped($entity, &$data, &$save, &$par
     // Loop through line items, adding tax to amount where applicable
     $i = 0;
     foreach($data['line_items'] as &$line_item) {
-      if(!empty($line_item['tax_amount'])) {
+      if(!empty($line_item['tax_amount']) && !empty($line_item['qty'])) {
         $incl_amount = ($line_item['line_total'] + $line_item['tax_amount']) / $line_item['qty'];
         $params['LineItems']['LineItem'][$i]['UnitAmount'] = round($incl_amount, 2);
       }
