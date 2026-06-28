@@ -18,13 +18,16 @@
   <version>1.2</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>5.0</ver>
+    <ver>5.51</ver>
   </compatibility>
   <civix>
     <namespace>CRM/Xerountax</namespace>
-    <format>25.01.1</format>
+    <format>25.10.2</format>
   </civix>
   <classloader>
     <psr4 prefix="Civi\" path="Civi"/>
   </classloader>
+  <mixins>
+    <mixin>scan-classes@1.0.0</mixin>
+  </mixins>
 </extension>
